@@ -65,11 +65,61 @@
 }
 
 #recipe{
-
     width: 450px;
     height:350px;
     top: 300px;
     left: 34px;
+}
+
+#tea{
+    top: 300px;
+    left: 30px;
+
+    background-color: #D932AA;
+}
+
+#pomegranate{
+    top: 300px;
+    left: 50px;
+
+    background-color: #D21B1B;
+}
+
+#rum{
+    top: 300px;
+    left: 70px;
+
+    background-color: #FC8B23;
+}
+
+#orange{
+    top: 300px;
+    left: 90px;
+
+    background-color: #FC3023;
+}
+
+#prosecco{
+    top: 300px;
+    left: 110px;
+
+    background-color: #4AD1DA;
+}
+
+#tea, #pomegranate, #rum, #orange, #prosecco{
+    z-index: 9999;
+    display: inline-block;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    outline: 0;
+    width: 100px;
+    height: 30px;
+    padding: 2px;
 }
 
 #title, #main, #recipe, #directions, #top, #measurements, #mainScreen, #drinkChoice, #topButton{
