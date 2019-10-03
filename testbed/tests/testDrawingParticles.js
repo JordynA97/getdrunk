@@ -50,62 +50,26 @@ function TestDrawingParticles() {
   shape.Set(new b2Vec2(-2, 3.2), new b2Vec2(-1.2, 3.2));
   body.CreateFixtureFromShape(shape, 0.1);
 
+  //side2
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(-1.1, 3.2), new b2Vec2(2, 3.2));
+  shape.Set(new b2Vec2(.5, 2), new b2Vec2(1, 0));
   body.CreateFixtureFromShape(shape, 0.1);
 
+  //side1
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(-1.2, 3.2), new b2Vec2(-1.2, 2.8));
+  shape.Set(new b2Vec2(2.5, 2), new b2Vec2(2, 0));
   body.CreateFixtureFromShape(shape, 0.1);
 
+  //bottom
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(-1.1, 3.2), new b2Vec2(-1.1, 2.8));
-   body.CreateFixtureFromShape(shape, 0.1);
-
-  bd = new b2BodyDef;
-  body = world.CreateBody(bd);
-  shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(-1.6, 2.4), new b2Vec2(0.8, 2));
+  shape.Set(new b2Vec2(1, 0), new b2Vec2(2, 0));
   body.CreateFixtureFromShape(shape, 0.1);
-
-  bd = new b2BodyDef;
-  body = world.CreateBody(bd);
-  shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(1.6, 1.6), new b2Vec2(-0.8, 1.2));
-  body.CreateFixtureFromShape(shape, 0.1);
-
-
-  bd = new b2BodyDef;
-  body = world.CreateBody(bd);
-  shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(-1.2, 0.8), new b2Vec2(-1.2, 0));
-  body.CreateFixtureFromShape(shape, 0.1);
-
-  bd = new b2BodyDef;
-  body = world.CreateBody(bd);
-  shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(-0.4, 0.8), new b2Vec2(-0.4, 0));
-  body.CreateFixtureFromShape(shape, 0.1);
-
-
-  bd = new b2BodyDef;
-  body = world.CreateBody(bd);
-  shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(0.4, 0.8), new b2Vec2(0.4, 0));
-  body.CreateFixtureFromShape(shape, 0.1);
-
-  bd = new b2BodyDef;
-  body = world.CreateBody(bd);
-  shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(1.2, 0.8), new b2Vec2(1.2, 0));
-  body.CreateFixtureFromShape(shape, 0.1);
-
 
 
   this.colorIndex = 0;
