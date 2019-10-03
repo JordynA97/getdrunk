@@ -8,7 +8,8 @@ var e_parameterRepulsive = e_parameterBegin | (1 << 5);
 
 function TestDrawingParticles() {
   camera.position.y = 2;
-  camera.position.z = 3.2;
+  camera.position.z = 5;
+  camera.position.x = 1.5;
   var bd = new b2BodyDef;
   var ground = world.CreateBody(bd);
 
