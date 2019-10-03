@@ -64,7 +64,15 @@
     visibility: visible;
 }
 
-#title, #main, #directions, #top, #measurements, #mainScreen, #drinkChoice, #topButton{
+#recipe{
+
+    width: 450px;
+    height:350px;
+    top: 300px;
+    left: 34px;
+}
+
+#title, #main, #recipe, #directions, #top, #measurements, #mainScreen, #drinkChoice, #topButton{
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
