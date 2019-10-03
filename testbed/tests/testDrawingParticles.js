@@ -7,18 +7,106 @@ var e_parameterSpringBarrier = e_parameterBegin | (1 << 4);
 var e_parameterRepulsive = e_parameterBegin | (1 << 5);
 
 function TestDrawingParticles() {
-  camera.position.y = 2;
-  camera.position.z = 5;
-  camera.position.x = -2.5;
+  camera.position.y = 1;
+  camera.position.z = 3;
+  // camera.position.x = -2.5;
   var bd = new b2BodyDef;
   var ground = world.CreateBody(bd);
 
-  var shape = new b2PolygonShape;
-  shape.vertices.push(new b2Vec2(-3, 4));
-  shape.vertices.push(new b2Vec2(0, 4));
-  shape.vertices.push(new b2Vec2(-.8, 0));
-  shape.vertices.push(new b2Vec2(-2.3, 0));
-  ground.CreateFixtureFromShape(shape, 0.0);
+  // bd.type = b2_dynamicBody;
+  // bd.allowSleep = false;
+  // bd.position.Set(0, 1);
+  // var body = world.CreateBody(bd);
+
+  // //right
+  // var b1 = new b2PolygonShape();
+  // b1.SetAsBoxXYCenterAngle(0.05, 1, new b2Vec2(0.9, 0), -37);
+  // body.CreateFixtureFromShape(b1, 5);
+
+  // //left
+  // var b2 = new b2PolygonShape();
+  // b2.SetAsBoxXYCenterAngle(0.05, 1, new b2Vec2(-0.9, 0), 101);
+  // body.CreateFixtureFromShape(b2, 5);
+
+  // //bottom
+  // var b4 = new b2PolygonShape();
+  // b4.SetAsBoxXYCenterAngle(.5, 0.05, new b2Vec2(0, -0.9), 0);
+  // body.CreateFixtureFromShape(b4, 5);
+
+  
+  // var jd = new b2RevoluteJointDef();
+  // jd.motorSpeed = 0;
+  // jd.maxMotorTorque = 1e7;
+  // jd.enableMotor = true;
+  // this.joint = jd.InitializeAndCreate(ground, body, new b2Vec2(0, 1));
+  // this.time = 0;
+
+  shape = new b2PolygonShape;
+  shape.SetAsBoxXYCenterAngle(2, 0.4, new b2Vec2(0, 3.6), 0);
+  bd = new b2BodyDef;
+  var body = world.CreateBody(bd);
+  
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-2, 3.2), new b2Vec2(-1.2, 3.2));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-1.1, 3.2), new b2Vec2(2, 3.2));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-1.2, 3.2), new b2Vec2(-1.2, 2.8));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-1.1, 3.2), new b2Vec2(-1.1, 2.8));
+   body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-1.6, 2.4), new b2Vec2(0.8, 2));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(1.6, 1.6), new b2Vec2(-0.8, 1.2));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-1.2, 0.8), new b2Vec2(-1.2, 0));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(-0.4, 0.8), new b2Vec2(-0.4, 0));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(0.4, 0.8), new b2Vec2(0.4, 0));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+  bd = new b2BodyDef;
+  body = world.CreateBody(bd);
+  shape = new b2EdgeShape;
+  shape.Set(new b2Vec2(1.2, 0.8), new b2Vec2(1.2, 0));
+  body.CreateFixtureFromShape(shape, 0.1);
+
+
 
   this.colorIndex = 0;
   var psd = new b2ParticleSystemDef();

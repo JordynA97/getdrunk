@@ -73,7 +73,6 @@ function TestLiquidTimer() {
   shape.Set(new b2Vec2(-0.4, 0.8), new b2Vec2(-0.4, 0));
   body.CreateFixtureFromShape(shape, 0.1);
 
-
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
