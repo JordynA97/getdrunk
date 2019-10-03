@@ -9,36 +9,15 @@ var e_parameterRepulsive = e_parameterBegin | (1 << 5);
 function TestDrawingParticles() {
   camera.position.y = 2;
   camera.position.z = 5;
-  camera.position.x = 1.5;
+  camera.position.x = -2.5;
   var bd = new b2BodyDef;
   var ground = world.CreateBody(bd);
 
   var shape = new b2PolygonShape;
-  shape.vertices.push(new b2Vec2(-4, -2));
-  shape.vertices.push(new b2Vec2(4, -2));
-  shape.vertices.push(new b2Vec2(4, 0));
-  shape.vertices.push(new b2Vec2(-4, 0));
-  ground.CreateFixtureFromShape(shape, 0.0);
-
-  shape = new b2PolygonShape;
-  shape.vertices.push(new b2Vec2(-4, -2));
-  shape.vertices.push(new b2Vec2(-2, -2));
-  shape.vertices.push(new b2Vec2(-2, 6));
-  shape.vertices.push(new b2Vec2(-4, 6));
-  ground.CreateFixtureFromShape(shape, 0.0);
-
-  shape = new b2PolygonShape;
-  shape.vertices.push(new b2Vec2(2, -2));
-  shape.vertices.push(new b2Vec2(4, -2));
-  shape.vertices.push(new b2Vec2(4, 6));
-  shape.vertices.push(new b2Vec2(2, 6));
-  ground.CreateFixtureFromShape(shape, 0.0);
-
-  shape = new b2PolygonShape;
-  shape.vertices.push(new b2Vec2(-4, 4));
-  shape.vertices.push(new b2Vec2(4, 4));
-  shape.vertices.push(new b2Vec2(4, 6));
-  shape.vertices.push(new b2Vec2(-4, 6));
+  shape.vertices.push(new b2Vec2(-3, 4));
+  shape.vertices.push(new b2Vec2(0, 4));
+  shape.vertices.push(new b2Vec2(-.8, 0));
+  shape.vertices.push(new b2Vec2(-2.3, 0));
   ground.CreateFixtureFromShape(shape, 0.0);
 
   this.colorIndex = 0;
