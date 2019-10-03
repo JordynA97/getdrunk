@@ -13,34 +13,6 @@ function TestDrawingParticles() {
   var bd = new b2BodyDef;
   var ground = world.CreateBody(bd);
 
-  // bd.type = b2_dynamicBody;
-  // bd.allowSleep = false;
-  // bd.position.Set(0, 1);
-  // var body = world.CreateBody(bd);
-
-  // //right
-  // var b1 = new b2PolygonShape();
-  // b1.SetAsBoxXYCenterAngle(0.05, 1, new b2Vec2(0.9, 0), -37);
-  // body.CreateFixtureFromShape(b1, 5);
-
-  // //left
-  // var b2 = new b2PolygonShape();
-  // b2.SetAsBoxXYCenterAngle(0.05, 1, new b2Vec2(-0.9, 0), 101);
-  // body.CreateFixtureFromShape(b2, 5);
-
-  // //bottom
-  // var b4 = new b2PolygonShape();
-  // b4.SetAsBoxXYCenterAngle(.5, 0.05, new b2Vec2(0, -0.9), 0);
-  // body.CreateFixtureFromShape(b4, 5);
-
-  
-  // var jd = new b2RevoluteJointDef();
-  // jd.motorSpeed = 0;
-  // jd.maxMotorTorque = 1e7;
-  // jd.enableMotor = true;
-  // this.joint = jd.InitializeAndCreate(ground, body, new b2Vec2(0, 1));
-  // this.time = 0;
-
   shape = new b2PolygonShape;
   shape.SetAsBoxXYCenterAngle(2, 0.4, new b2Vec2(0, 3.6), 0);
   bd = new b2BodyDef;
@@ -54,21 +26,21 @@ function TestDrawingParticles() {
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(.5, 2), new b2Vec2(1, 0));
+  shape.Set(new b2Vec2(.5, 1.5), new b2Vec2(1, -.5));
   body.CreateFixtureFromShape(shape, 0.1);
 
   //side1
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(2.5, 2), new b2Vec2(2, 0));
+  shape.Set(new b2Vec2(2.5, 1.5), new b2Vec2(2, -.5));
   body.CreateFixtureFromShape(shape, 0.1);
 
   //bottom
   bd = new b2BodyDef;
   body = world.CreateBody(bd);
   shape = new b2EdgeShape;
-  shape.Set(new b2Vec2(1, 0), new b2Vec2(2, 0));
+  shape.Set(new b2Vec2(1, -.5), new b2Vec2(2, -.5));
   body.CreateFixtureFromShape(shape, 0.1);
 
 
@@ -214,3 +186,7 @@ TestDrawingParticles.prototype.ParticleGroupDestroyed = function(group) {
     this.lastGroup = null;
   }
 };
+
+function closeOverlay(){
+  document.getElementById("overlay").visibility = "hidden";
+}
