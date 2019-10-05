@@ -6,7 +6,8 @@
   </head>
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-  <script src="liquidfun.js"></script>
+<script src="liquidfun.js"></script>
+  
 
   <!-- testbed code !-->
   <script src="testbed/renderer.js"></script>
@@ -36,21 +37,29 @@
   }
   </script>
 
+<script>
+  $(document).ready(function simulate () {
+    $('#u0u').sendKeys("{s}");
+  });
+</script>
+
   <body onload="initTestbed()">
     <div id="main">
         <img id="title" src="media/title.png">
         <img id="directions" src="media/subtitle.png" draggable="false">
         <img id="top" src="media/top.png">
         <img id="topButton" src="media/topButton.png">
-        <img id="measurements" src="media/measurements.png" draggable="false" selectDisable="true">
         <img id="recipe" src="media/recipe.png">
+        <img id="measurements" src="media/measurements.png" draggable="false" selectDisable="true">
+        
 
-        <button id="tea">hibiscus tea</button>
+        <button onclick="simulate()" id="tea">hibiscus tea</button>
         <button id="pomegranate">pomegranate juice</button>
         <button id="rum">spiced rum</button>
         <button id="orange">blood orange</button>
         <button id="juice">juice</button>
         <button id="prosecco">prosecco</button>
+       
 
     </div>
 

@@ -6,6 +6,9 @@ var e_parameterElasticBarrier = e_parameterBegin | (1 << 3);
 var e_parameterSpringBarrier = e_parameterBegin | (1 << 4);
 var e_parameterRepulsive = e_parameterBegin | (1 << 5);
 
+//Tea color
+var TeaColor = false;
+
 function TestDrawingParticles() {
   camera.position.y = 1;
   camera.position.z = 3;
@@ -44,7 +47,10 @@ function TestDrawingParticles() {
   body.CreateFixtureFromShape(shape, 0.1);
 
 
+
   this.colorIndex = 0;
+
+
   var psd = new b2ParticleSystemDef();
   psd.radius = 0.05;
 
@@ -81,11 +87,35 @@ TestDrawingParticles.prototype.DetermineParticleParameter = function() {
   return e_parameterMove;
 };
 
+TestDrawingParticles.prototype.change = function() {
+  
+}
 TestDrawingParticles.prototype.Keyboard = function(key) {
   this.drawing = key != 'X';
   this.particleFlags = 0;
   this.groupFlags = 0;
   switch (key) {
+
+    case 't':
+      this.colorIndex = 0;
+      break;
+    case 'p':
+      this.colorIndex = 1;
+      break;
+    case 'r':
+      this.colorIndex = 2;
+       break;
+     case 'o':
+        this.colorIndex = 3;
+      break;
+    case 'j':
+      this.colorIndex = 4;
+       break;
+    case 's':
+      this.colorIndex = 5;
+      break;
+  }
+    /*
     case 'E':
       this.particleFlags = b2_elasticParticle;
       this.groupFlags = b2_solidParticleGroup;
@@ -137,7 +167,9 @@ TestDrawingParticles.prototype.Keyboard = function(key) {
     default:
       break;
   }
+  */
 };
+
 
 TestDrawingParticles.prototype.MouseDown = function(p) {
   this.drawing = true;
@@ -156,7 +188,7 @@ TestDrawingParticles.prototype.MouseMove = function(p) {
     var joinGroup =
       this.lastGroup && this.groupFlags === this.lastGroup.GetGroupFlags();
     if (!joinGroup) {
-      this.colorIndex = (this.colorIndex + 1) % particleColors.length;
+      //this.colorIndex = (this.colorIndex + 1) % particleColors.length;
     }
     var pd = new b2ParticleGroupDef;
     pd.shape = shape;
