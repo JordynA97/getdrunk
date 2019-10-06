@@ -72,42 +72,42 @@
 }
 
 #tea{
-    top: 332px;
+    top: 330px;
     left: 290px;
     width: 115px;
     background-color: #D932AA;
 }
 
 #pomegranate{
-    top: 372px;
+    top: 370px;
     left: 176px;
     width: 150px;
     background-color: #D21B1B;
 }
 
 #rum{
-    top: 412px;
+    top: 410px;
     left: 92px;
     width: 103px;
     background-color: #FC8B23;
 }
 
 #orange{
-    top: 412px;
+    top: 410px;
     left: 355px;
     width: 105px;
     background-color: #FC3023;
 }
 
 #juice{
-    top: 452px;
+    top: 450px;
     left: 70px;
     width: 60px;
     background-color: #FC3023;
 }
 
 #prosecco{
-    top: 452px;
+    top: 450px;
     left: 367px;
     width: 95px;
     background-color: #4AD1DA;
@@ -124,8 +124,8 @@
     color: white;
     text-align: center;
     outline: 0;
-    height: 25px;
-    padding: 1px;
+    height: 30px;
+    padding: 2px;
 }
 
 #title, #main, #recipe, #directions, #top, #measurements, #mainScreen, #drinkChoice, #topButton{
