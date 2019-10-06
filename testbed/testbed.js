@@ -1,4 +1,16 @@
 // shouldnt be a global :(
+
+  var particleColors = [
+    new b2ParticleColor(217,50,170), // Tea
+    new b2ParticleColor(210,27,27), // Pomegranate
+    new b2ParticleColor(252,139,35), // Rum
+    new b2ParticleColor(252,48,35), // Orange
+    new b2ParticleColor(252,48,35), // Juice
+    new b2ParticleColor(74,209,218), // Prosecco
+   
+  ];
+
+/*
 var particleColors = [
   new b2ParticleColor(0xff, 0x00, 0x00, 0xff), // red
   new b2ParticleColor(0x00, 0xff, 0x00, 0xff), // green
@@ -9,6 +21,7 @@ var particleColors = [
   new b2ParticleColor(0xff, 0xd7, 0x00, 0xff), // gold
   new b2ParticleColor(0x00, 0xff, 0xff, 0xff) // cyan
 ];
+*/
 var container;
 var world = null;
 var threeRenderer;
